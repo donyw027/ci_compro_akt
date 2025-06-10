@@ -21,8 +21,22 @@
 <section class="Feautes section">
 	<div class="container">
 		<div class="row">
+			<div class="col-lg-4 col-md-12 col-12">
+
+
+			<div>
+							<i class=""><img src="<?= base_url('assets/img/aboutpic.jpg') ?>" alt="" style="border-radius: 10px; height: 600px;"></i>
+						</div>
+			
+
+
+
+			</div> <br>
+
+			<div class="col-lg-8 col-md-12 col-12">
 			<div class="col-lg-12">
 				<div class="section- title">
+					<br>
 					<h2>About </h2>
 					<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
 					<p style="text-align: justify;">
@@ -37,7 +51,7 @@
 
 					<div class="row">
 						<!-- Single Table -->
-						<div class="col-lg-4 col-md-12 col-12">
+						<div class="col-lg-4 col-md-12 col-6">
 
 							<b>Bromo</b><br><br>
 							<a class="btn btn-sm" style="color: white;" target="_blank" href="https://www.bromoguitars.com">bromoguitars.com</a><br><br>
@@ -45,7 +59,7 @@
 
 
 						</div>
-						<div class="col-lg-4 col-md-12 col-12">
+						<div class="col-lg-4 col-md-12 col-6">
 							<b>Valencia</b><br><br>
 
 							<a class="btn btn-sm" style="color: white;" target="_blank" href="https://www.valenciaguitars.com">valenciaguitars.com</a><br><br>
@@ -54,7 +68,7 @@
 
 						</div>
 
-						<div class="col-lg-4 col-md-12 col-12">
+						<div class="col-lg-4 col-md-12 col-6">
 							<b>Mahalo</b><br><br>
 
 							<a class="btn btn-sm" style="color: white;" target="_blank" href="https://www.mahaloukuleles.com">mahaloukuleles.com</a><br><br>
@@ -69,7 +83,21 @@
 
 
 				</div>
+
+
 			</div>
+
+
+
+			</div>
+
+			<h2 class=""><br>Partner & Export Destination</h2>
+						<p>Our products are distributed across various countries and trusted by musicians and international music distributors.</p>
+			<img src="<?= base_url('assets/img/map2.jpg') ?>" alt="#">
+
+
+
+			
 
 		</div>
 

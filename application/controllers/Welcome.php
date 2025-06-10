@@ -18,6 +18,34 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+
+	 public function __construct()
+	 {
+		 parent::__construct();
+ 
+		 // Cek jika tidak ada bahasa tersimpan, default ke indonesian
+		 if (!$this->session->userdata('site_lang')) {
+			 $this->session->set_userdata('site_lang', 'indonesian');
+		 }
+ 
+		 // Load bahasa sesuai session
+		 $this->lang->load('web_lang', $this->session->userdata('site_lang'));
+	 }
+
+
+	 public function change_language($lang)
+    {
+        // Set session sesuai pilihan bahasa
+        if ($lang == 'en') {
+            $this->session->set_userdata('site_lang', 'english');
+        } else {
+            $this->session->set_userdata('site_lang', 'indonesian');
+        }
+
+        redirect($_SERVER['HTTP_REFERER']); // kembali ke halaman sebelumnya
+    }
+
 	public function index()
 	{
 		$data['title'] = 'AKT Indonesia';

@@ -9,7 +9,8 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text">
-							<h1> <span>Expertise and Quality in every musical instrument</span></h1>
+							<!-- <h1> <span>Expertise and Quality in every musical instrument</span></h1> -->
+							<h1> <span> <?= $this->lang->line('slider1_title') ?> </span></h1>
 							<p style="color: white;">Creating the best sound through expert hand touch and high quality materials.</p>
 							<!-- <div class="button">
 										<a href="#" class="btn">Get Appointment</a>
@@ -117,31 +118,81 @@
 <div id="fun-facts" class="fun-facts section overlay">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-12">
+
+		<div class="col-lg-12 col-md-6 col-12">
 				<!-- Start Single Fun -->
 				<div class="single-fun">
-					<i class="icofont icofont-book"></i>
-					<div class="content">
-						<span class="">Vision</span>
-						<p>To become a leading guitar and ukulele manufacturer from Indonesia that is known on the world stage for its quality and innovation.</p>
+					<!-- <i class="icofont icofont-book"></i> -->
+					<div class="capacity-section text-center">
+						<h1 class="section-title">Our Employees</h1>
+						<div class="row justify-content-center">
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Employee</div>
+									<div class="capacity-number" data-target="400">±</div>
+								</div>
+							</div>
+
+							<!-- Item -->
+							
+
+						</div>
 					</div>
 				</div>
 				<!-- End Single Fun -->
 			</div>
-			<div class="col-lg-6 col-md-6 col-12">
+
+			<div class="col-lg-12 col-md-6 col-12">
 				<!-- Start Single Fun -->
 				<div class="single-fun">
-					<i class="icofont icofont-book"></i>
-					<div class="content">
-						<span class="">Mision</span>
-						<p>
-						<ol type="" style="color: white;">
-							<li>Producing products with international standards.</li>
-							<li>Empowering local craftsmen to create high quality musical instruments.</li>
-							<li>Continuous innovation in design and sound.</li>
-							<li>Spreading the love of music all over the world.</li>
-						</ol>
-							 </p>
+					<!-- <i class="icofont icofont-book"></i> -->
+					<div class="capacity-section text-center">
+						<h1 class="section-title">Our Production Capacity /Year</h1>
+						<div class="row justify-content-center">
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Castanets</div>
+									<div class="capacity-number" data-target="25000">±</div>
+								</div>
+							</div>
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Kalimba</div>
+									<div class="capacity-number" data-target="25000">±</div>
+								</div>
+							</div>
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Cajon</div>
+									<div class="capacity-number" data-target="25000">±</div>
+								</div>
+							</div>
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Guitar</div>
+									<div class="capacity-number" data-target="800000">±</div>
+								</div>
+							</div>
+
+							<!-- Item -->
+							<div class="col-lg-2 col-6 mb-4">
+								<div class="capacity-box">
+									<div class="capacity-title">Ukuleles</div>
+									<div class="capacity-number" data-target="800000">±</div>
+								</div>
+							</div>
+
+						</div>
 					</div>
 				</div>
 				<!-- End Single Fun -->
@@ -163,9 +214,9 @@
 					<h2>Our Brand</h2>
 					<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
 					<p>Each brand we present is designed to meet the needs of musicians of all levels — from beginners to professionals. With their own characteristics and strengths, Bromo, Valencia, and Mahalo represent our dedication to quality, innovation, and love of music.</p>
-<br>
+					<br>
 					<p>
-						<b >If you'd love to explore all of our products, discover their full specifications, and find our trusted distributors, please feel free to visit our official website below.</b>
+						<b>If you'd love to explore all of our products, discover their full specifications, and find our trusted distributors, please feel free to visit our official website below.</b>
 					</p>
 
 				</div>
@@ -182,7 +233,7 @@
 						</div>
 						<h4 class="title">Bromo</h4>
 						<div class="price">
-							<p class="amount"><span>www.bromoguitars.com</span></p>
+							<p class="amount"><span>"Inspire Musicians To The Top"</span></p>
 
 						</div>
 						<div class="col-lg-4 col-md-6 col-12">
@@ -218,7 +269,7 @@
 						</div>
 						<h4 class="title">Mahalo</h4>
 						<div class="price">
-							<p class="amount"><span>www.mahaloukuleles.com</span></p>
+							<p class="amount"><span>"The World's Most Played Ukulele"</span></p>
 						</div>
 					</div>
 					<!-- Table List -->
@@ -248,7 +299,7 @@
 						</div>
 						<h4 class="title">Valencia</h4>
 						<div class="price">
-							<p class="amount"><span>www.valenciaguitars.com</span></p>
+							<p class="amount"><span>"Creating Musicians For Over 50 Years"</span></p>
 						</div>
 					</div>
 					<!-- Table List -->

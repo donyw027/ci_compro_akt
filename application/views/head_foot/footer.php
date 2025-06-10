@@ -6,7 +6,8 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-12">
 							<div class="single-footer">
-								<img src="<?= base_url('assets/img/AKT.png') ?>" alt="" width="60%">><br><br>
+								<img src="<?= base_url('assets/img/AKT.png') ?>" alt="" width="60%"><br><br>
+								<img src="<?= base_url('assets/img/apkb.png') ?>" alt="" width="60%"><br><br>
 								<img src="<?= base_url('assets/img/SVLK Logo.png') ?>" alt="" width="60%">
 							</div>
 						</div>
@@ -15,13 +16,13 @@
 								<h2>About Us</h2>
 								<p>AKT Indonesia is a musical instrument manufacturer producing guitars, ukuleles, castanets, and cajon with a blend of craftsmanship and quality.</p>
 								<!-- Social -->
-								<!-- <ul class="social">
-									<li><a href=""><i class="icofont-facebook"></i></a></li>
+								<ul class="social">
+									<!-- <li><a href=""><i class="icofont-facebook"></i></a></li>
 									<li><a href=""><i class="icofont-google-plus"></i></a></li>
-									<li><a href=""><i class="icofont-twitter"></i></a></li>
-									<li><a href=""><i class="icofont-instagram"></i></a></li>
-									<li><a href="#"><i class="icofont-pinterest"></i></a></li> 
-								</ul> -->
+									<li><a href=""><i class="icofont-twitter"></i></a></li> -->
+									<li><a href="mailto:info@akt-id.com"><i class="icofont-email"></i></a></li>
+									<li><a target="_blank" href="https://id.pinterest.com/pt_akt_indonesia/"><i class="icofont-pinterest"></i></a></li> 
+								</ul>
 								<!-- End Social -->
 							</div>
 						</div>
@@ -100,3 +101,24 @@
 		<script src="<?= base_url('assets/js/main.js') ?>"></script>
     </body>
 </html>
+
+
+<script>
+  const counters = document.querySelectorAll('.capacity-number');
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText.replace(/,/g, '');
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment).toLocaleString();
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+    updateCounter();
+  });
+</script>
