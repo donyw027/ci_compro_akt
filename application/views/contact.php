@@ -4,11 +4,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>Contact Us</h2>
+							<h2><?= $this->lang->line('contact_title') ?></h2>
 							<ul class="bread-list">
-								<li><a href="<?= site_url('home') ?>">Home</a></li>
+								<li><a href="<?= site_url('home') ?>"><?= $this->lang->line('home') ?></a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Contact Us</li>
+								<li class="active"><?= $this->lang->line('contact') ?></li>
 							</ul>
 						</div>
 					</div>
@@ -53,7 +53,7 @@
 								<a target="_blank" href="https://www.google.com/maps/dir//Jl.+Rembang+Industri+Raya+No.45,+Jati,+Pandean,+Kec.+Rembang,+Pasuruan,+Jawa+Timur+67152/@-7.6249155,112.7347126,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd7c4d67369e3a9:0x953081db72682063!2m2!1d112.8171103!2d-7.6249227?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D">
 								<div class="content">
 									<h3>Jl. Rembang Industri Raya No.45</h3>
-									<p>Kec. Rembang, Pasuruan, Jawa Timur 67152</p>
+									<p>Kec. Rembang, Pasuruan, <?= $this->lang->line('alamat') ?> 67152</p>
 								</div></a>
 							</div>
 						</div>
@@ -63,8 +63,8 @@
 							<div class="single-info">
 								<i class="icofont icofont-wall-clock"></i>
 								<div class="content">
-									<h3>Mon - Fri: <br> 7am - 4pm</h3>
-									<p>Saturday & Sunday Closed</p>
+									<h3><?= $this->lang->line('contact_day') ?> <br> 7am - 4pm</h3>
+									<p><?= $this->lang->line('contact_close') ?></p>
 								</div>
 							</div>
 						</div>

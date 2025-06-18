@@ -11,80 +11,91 @@ $lang = [
     'career' => 'Karir',
 
     // Hero / Slider
-    'slider1_title' => 'xksadkasdjamjids',
-    'slider1_subtitle' => 'Providing high-quality products and services for industrial and residential needs.',
+    'slider1_title' => 'Keahlian dan Kualitas dalam setiap alat musik',
+    'slider1_subtitle' => 'Menciptakan suara terbaik melalui sentuhan tangan ahli dan bahan berkualitas tinggi.',
 
-    'slider2_title' => 'Your Trusted Partner for Electrical Solutions',
-    'slider2_subtitle' => 'Providing high-quality products and services for industrial and residential needs.',
+    'slider2_title' => 'Inovasi dalam setiap Produk',
+    'slider2_subtitle' => 'Dari pabrik kami, hadir produk yang menggabungkan teknik tradisional dan teknologi modern untuk para musisi di seluruh dunia.',
 
-    'slider3_title' => 'Your Trusted Partner for Electrical Solutions',
-    'slider3_subtitle' => 'Providing high-quality products and services for industrial and residential needs.',
+    'slider3_title' => 'Dirancang untuk Kejernihan Suara',
+    'slider3_subtitle' => 'Setiap instrumen dibuat dengan penuh semangat, ketelitian, dan rasa hormat yang mendalam terhadap tradisi musik.',
 
     // About Section
-    'about_title' => 'About Us',
-    'h_about_content' => 'We are a company engaged in the distribution of electrical equipment, committed to providing the best solutions for our customers.',
+    'about_title' => 'Tentang Kami',
+    'h_about_content' => 'AKT Indonesia adalah produsen alat musik yang memproduksi gitar, ukulele, kastanyet, dan cajon dengan memadukan keterampilan dan kualitas.  Komitmen kami bukan hanya untuk memproduksi alat musik — tetapi untuk menciptakan pengalaman musik yang istimewa. Dengan standar tinggi dan dedikasi penuh pada setiap proses, kami memastikan bahwa setiap produk layak untuk dipentaskan di panggung dunia.',
 
-    'about_sub1' => '',
-    'about_sub_detail1' => '',
+    'about_sub1' => 'Perhatian terhadap Detail',
+    'about_sub_detail1' => 'Dari pemilihan kayu hingga penyesuaian akhir, setiap langkah produksi dijalankan dengan sangat presisi untuk hasil yang sempurna.',
 
-    'about_sub2' => '',
-    'about_sub_detail2' =>'' ,
+    'about_sub2' => 'Kualitas yang baik',
+    'about_sub_detail2' => 'Setiap gitar melalui proses kontrol kualitas yang ketat untuk memastikan suara dan ketahanan yang unggul.',
 
-    'about_sub3' => '',
-    'about_sub_detail3' =>'' ,
+    'about_sub3' => 'Kepuasan Pelanggan',
+    'about_sub_detail3' => 'Kami mendengarkan, memahami, dan beradaptasi untuk memberikan pengalaman terbaik.',
 
-    // Vision & Mission
-    'vision_title' => 'Vision',
-    'vision_content' => 'To become the most trusted and leading electrical equipment distribution company in Indonesia.',
-    'mission_title' => 'Mission',
-    'mission_1' => 'Provide high-quality products with the best service.',
-    'mission_2' => 'Build long-term relationships with customers.',
-    'mission_3' => 'Continuously innovate to meet dynamic market needs.',
+    //employe
+
+    'employe_title' => 'Karyawan Kami',
+    'employes' => 'Karyawan',
+    'our_production' => 'Kapasitas Produksi Kami /Tahun',
+    'castanets' => 'Kastenyet',
+    'kalimba' => 'Kalimba',
+    'cajon' => 'Cajon',
+    'guitar' => 'Gitar',
+    'ukuleles' => 'Ukulele',
+
 
     // brand Section
-    'brand_title' => 'Our Brand',
-    'brand_desc' => 'We offer a wide range of electrical equipment from reputable brands.',
-    'brand_desc2' => 'Electrical Panel',
+    'brand_title' => 'Brand Kami',
+    'brand_desc' => 'Setiap merek yang kami hadirkan dirancang untuk memenuhi kebutuhan musisi dari semua tingkatan — dari pemula hingga profesional. Dengan karakteristik dan kelebihannya masing-masing, Bromo, Valencia, dan Mahalo mewakili dedikasi kami terhadap kualitas, inovasi, dan kecintaan terhadap musik.',
+    'brand_desc2' => 'Jika Anda ingin menjelajahi semua produk kami, menemukan spesifikasi lengkapnya, dan menemukan distributor tepercaya kami, silakan kunjungi situs web resmi kami di bawah ini.',
 
-    'button_check_website' => 'Cables and Accessories',
-    'bromo_distribution' => 'See All Products',
-    'mahalo_distribution' => 'See All Products',
-    'valencia_distribution' => 'See All Products',
+    'button_check_website' => 'Kunjungi website kami',
+    'bromo_distribution' => 'Bromo Distributor',
+    'mahalo_distribution' => 'Mahalo Distributor',
+    'valencia_distribution' => 'Valencia Distributor',
 
     //  Section Bawah brand selection
-    'desc_under_brand' => 'Contact Us',
+    'desc_under_brand' => 'Kami tidak hanya membuat alat musik - kami membangun hubungan antara pemain dan pendengarnya. Gitar dan ukulele kami dibuat dengan presisi, menggunakan kayu dan pengerjaan terbaik. Dari nada pertama hingga panggung besar, produk kami siap menemani Anda dalam setiap perjalanan musik Anda.',
 
     // partner& export
-    'PE_title' => '',
+    'PE_title' => 'Mitra & Tujuan Ekspor',
+    'PE_desc' => 'Produk kami telah melintasi batas negara dan budaya, menginspirasi musisi di seluruh dunia. Kami bangga menjadi mitra berbagai merek dan distributor di dunia musik. Komitmen kami terhadap kualitas produk kami telah membuka pintu untuk ekspor ke berbagai negara dan menjalin kerja sama jangka panjang dengan mitra tepercaya.',
 
     // contact us
-    'contact_title' => '',
-    'contact_desc' => '',
+    'contact_title' => 'Hubungi kami',
+    'contact_desc' => 'Hubungi kami untuk informasi lebih lanjut tentang produk, kerja sama bisnis, atau permintaan khusus. Tim kami siap membantu Anda.',
 
     //-----------------------------------------------------------------------------ABOUT
-    'about_content1' => '',
-    'about_content2' => '',
+    'about_content1' => 'Kami adalah perusahaan manufaktur yang memproduksi alat musik berkualitas tinggi, termasuk gitar, ukulele, dan cajon. Sejak didirikan pada Oktober 2012 dan mulai beroperasi secara penuh pada Maret 2013, kami terus berkomitmen untuk menciptakan alat musik yang tidak hanya menghasilkan suara yang indah, tetapi juga memberikan pengalaman musik yang berkesan.Menggabungkan teknologi modern dengan keterampilan tradisional, setiap produk kami dibuat dengan penuh dedikasi terhadap kualitas, presisi, dan keindahan dalam setiap detailnya. Kami bangga menjadi bagian dari industri musik global, menyediakan alat musik yang digunakan oleh musisi dari berbagai belahan dunia.',
+    'about_content2' => 'Sebagai bagian dari upaya kami untuk mendukung efisiensi dan daya saing di pasar internasional, sejak April 2019 kami telah resmi menjadi Kawasan Berikat (KB). Dengan status ini, kami dapat meningkatkan kapasitas produksi dan mendukung ekspor alat musik ke berbagai negara dengan lebih baik.Bersama kami, musik bukan hanya suara—tetapi karya.',
+
+    'desc_ourbrand' => 'Untuk memenuhi berbagai kebutuhan pasar, kami memiliki tiga merek alat musik :',
+
+    'A_PE_desc' => 'Produk kami didistribusikan di berbagai negara dan dipercaya oleh musisi dan distributor musik internasional.',
 
 
     //-----------------------------------------------------------------------------CAREER
-    'career_content' => '',
+    'career_content' => 'tidak ada lowongan pekerjaan saat ini',
 
 
     //-----------------------------------------------------------------------------CONTACT
-    'contact_day' => '',
-    'contact_time' => '',
-    'contact_close' => '',
+    'contact_day' => 'Senin - Jumat:',
+    'alamat' => 'Jawa Timur',
+    'contact_close' => 'Sabtu & Minggu Tutup',
 
 
     //footer
-    'open_hours' => '',
-    'open_hours_desc' => '',
-    'day1' => '',
-    'day2' => '',
-    'open1' => '',
-    'open2' => '',
+    'f_about_title' => 'Tentang Kami',
+    'f_about_desc' => 'AKT Indonesia adalah produsen alat musik yang memproduksi gitar, ukulele, kastanyet, dan cajon dengan perpaduan antara keahlian dan kualitas yang baik.',
+    'open_hours' => 'Jam Buka',
+    'open_hours_desc' => 'Kami siap membantu Anda selama jam kerja kami. Jangan ragu untuk menghubungi kami',
+    'day1' => 'Senin - Jumat',
+    'day2' => 'Sabtu & Minggu',
+    'open1' => '07.00-16.00',
+    'open2' => 'Tutup',
 
-    
+
 
 
 ];

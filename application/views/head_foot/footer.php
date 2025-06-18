@@ -11,10 +11,10 @@
 								<img src="<?= base_url('assets/img/SVLK Logo.png') ?>" alt="" width="60%">
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-12">
+						<div class="col-lg-4 col-md-6 col-6">
 							<div class="single-footer">
-								<h2>About Us</h2>
-								<p>AKT Indonesia is a musical instrument manufacturer producing guitars, ukuleles, castanets, and cajon with a blend of craftsmanship and quality.</p>
+								<h2><?= $this->lang->line('f_about_title') ?></h2>
+								<p><?= $this->lang->line('f_about_desc') ?></p>
 								<!-- Social -->
 								<ul class="social">
 									<!-- <li><a href=""><i class="icofont-facebook"></i></a></li>
@@ -22,18 +22,19 @@
 									<li><a href=""><i class="icofont-twitter"></i></a></li> -->
 									<li><a href="mailto:info@akt-id.com"><i class="icofont-email"></i></a></li>
 									<li><a target="_blank" href="https://id.pinterest.com/pt_akt_indonesia/"><i class="icofont-pinterest"></i></a></li> 
+									<li><a target="_blank" href="https://www.linkedin.com/company/aktindonesia/"><i class="icofont-linkedin"></i></a></li> 
 								</ul>
 								<!-- End Social -->
 							</div>
 						</div>
 						
-						<div class="col-lg-4 col-md-6 col-12">
+						<div class="col-lg-4 col-md-6 col-6">
 							<div class="single-footer">
-								<h2>Open Hours</h2>
-								<p>We're here to assist you during our regular business hours. Please feel free to reach out </p>
+								<h2><?= $this->lang->line('open_hours') ?></h2>
+								<p><?= $this->lang->line('open_hours_desc') ?></p>
 								<ul class="time-sidual">
-									<li class="day">Monday - Friday <span>07.00-16.00</span></li>
-									<li class="day">Saturday & Sunday <span>Closed</span></li>
+									<li class="day"><?= $this->lang->line('day1') ?><span>07.00-16.00</span></li>
+									<li class="day"><?= $this->lang->line('day2') ?><span><?= $this->lang->line('open2') ?></span></li>
 								</ul>
 							</div>
 						</div>

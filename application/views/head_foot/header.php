@@ -187,10 +187,10 @@
 													<li><a href="index.html">Home Page 1</a></li>
 												</ul>
 											</li> -->
-										<li><a href="<?= site_url('home') ?>">Home </a></li>
-										<li><a href="<?= site_url('about') ?>">About </a></li>
-										<li><a href="<?= site_url('career') ?>">Career </a></li>
-										<li><a href="<?= site_url('contact') ?>">Contact </a></li>
+										<li><a href="<?= site_url('home') ?>"><?= $this->lang->line('home') ?> </a></li>
+										<li><a href="<?= site_url('about') ?>"><?= $this->lang->line('about') ?> </a></li>
+										<li><a href="<?= site_url('career') ?>"><?= $this->lang->line('career') ?> </a></li>
+										<li><a href="<?= site_url('contact') ?>"><?= $this->lang->line('contact') ?> </a></li>
 									</ul>
 								</nav>
 							</div>

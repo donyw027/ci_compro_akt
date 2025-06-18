@@ -11,7 +11,7 @@
 						<div class="text">
 							<!-- <h1> <span>Expertise and Quality in every musical instrument</span></h1> -->
 							<h1> <span> <?= $this->lang->line('slider1_title') ?> </span></h1>
-							<p style="color: white;">Creating the best sound through expert hand touch and high quality materials.</p>
+							<p style="color: white;"><?= $this->lang->line('slider1_subtitle') ?></p>
 							<!-- <div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">Learn More</a>
@@ -28,8 +28,8 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text">
-							<h1><span>Innovation in every Product</span></h1>
-							<p style="color: white;">From our factory come products that combine traditional techniques and modern technology for musicians around the world.</p>
+							<h1><span><?= $this->lang->line('slider2_title') ?></span></h1>
+							<p style="color: white;"><?= $this->lang->line('slider2_subtitle') ?></p>
 							<!-- <div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">Learn More</a>
@@ -44,8 +44,8 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text">
-							<h1><span>Crafted for Pure Sound</span></h1>
-							<p style="color: white;">Each instrument is built with passion, precision, and a deep respect for musical tradition.</p>
+							<h1><span><?= $this->lang->line('slider3_title') ?></span></h1>
+							<p style="color: white;"><?= $this->lang->line('slider3_subtitle') ?></p>
 							<!-- <div class="button">
 										<a href="#" class="btn">Get Appointment</a>
 										<a href="#" class="btn primary">Learn More</a>
@@ -69,9 +69,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="section-title">
-					<h2>About Us </h2>
+					<h2><?= $this->lang->line('about_title') ?></h2>
 					<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
-					<p>AKT Indonesia is a musical instrument manufacturer producing guitars, ukuleles, castanets, and cajon with a blend of craftsmanship and quality. <br>Our commitment is not just to produce musical instruments — but to create a special musical experience. With high standards and full dedication to every process, we ensure that every product is worthy of the world stage.</p>
+					<p><?= $this->lang->line('h_about_content') ?></p>
 				</div>
 			</div>
 		</div>
@@ -82,8 +82,8 @@
 					<div class="signle-icon">
 						<i class="icofont icofont-ruler"></i>
 					</div>
-					<h3>Attention to Detail</h3>
-					<p>From wood selection to final adjustment, every step of production is executed with extreme precision for perfect results.</p>
+					<h3><?= $this->lang->line('about_sub1') ?></h3>
+					<p><?= $this->lang->line('about_sub_detail1') ?></p>
 				</div>
 				<!-- End Single features -->
 			</div>
@@ -93,8 +93,8 @@
 					<div class="signle-icon">
 						<i class="icofont icofont-shield"></i>
 					</div>
-					<h3>Quality First</h3>
-					<p>Each guitar goes through a rigorous quality control process to ensure superior sound and durability.</p>
+					<h3><?= $this->lang->line('about_sub2') ?></h3>
+					<p><?= $this->lang->line('about_sub_detail2') ?></p>
 				</div>
 				<!-- End Single features -->
 			</div>
@@ -104,8 +104,8 @@
 					<div class="signle-icon">
 						<i class="icofont icofont-user"></i>
 					</div>
-					<h3>Customer Satisfaction</h3>
-					<p>We listen, understand and adapt to provide the best experience.</p>
+					<h3><?= $this->lang->line('about_sub3') ?></h3>
+					<p><?= $this->lang->line('about_sub_detail3') ?></p>
 				</div>
 				<!-- End Single features -->
 			</div>
@@ -124,14 +124,16 @@
 				<div class="single-fun">
 					<!-- <i class="icofont icofont-book"></i> -->
 					<div class="capacity-section text-center">
-						<h1 class="section-title">Our Employees</h1>
+						<h1 class="section-title"><?= $this->lang->line('employe_title') ?></h1>
 						<div class="row justify-content-center">
 
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Employee</div>
-									<div class="capacity-number" data-target="400">±</div>
+									<div class="capacity-title"><?= $this->lang->line('employes') ?></div>
+									<div class="capacity-number" data-target="200">±</div>
+									Sampai
+									<div class="capacity-number" data-target="500">±</div>
 								</div>
 							</div>
 
@@ -149,13 +151,13 @@
 				<div class="single-fun">
 					<!-- <i class="icofont icofont-book"></i> -->
 					<div class="capacity-section text-center">
-						<h1 class="section-title">Our Production Capacity /Year</h1>
+						<h1 class="section-title"><?= $this->lang->line('our_production') ?></h1>
 						<div class="row justify-content-center">
 
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Castanets</div>
+									<div class="capacity-title"><?= $this->lang->line('castanets') ?></div>
 									<div class="capacity-number" data-target="25000">±</div>
 								</div>
 							</div>
@@ -163,7 +165,7 @@
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Kalimba</div>
+									<div class="capacity-title"><?= $this->lang->line('kalimba') ?></div>
 									<div class="capacity-number" data-target="25000">±</div>
 								</div>
 							</div>
@@ -171,7 +173,7 @@
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Cajon</div>
+									<div class="capacity-title"><?= $this->lang->line('cajon') ?></div>
 									<div class="capacity-number" data-target="25000">±</div>
 								</div>
 							</div>
@@ -179,7 +181,7 @@
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Guitar</div>
+									<div class="capacity-title"><?= $this->lang->line('guitar') ?></div>
 									<div class="capacity-number" data-target="800000">±</div>
 								</div>
 							</div>
@@ -187,7 +189,7 @@
 							<!-- Item -->
 							<div class="col-lg-2 col-6 mb-4">
 								<div class="capacity-box">
-									<div class="capacity-title">Ukuleles</div>
+									<div class="capacity-title"><?= $this->lang->line('ukuleles') ?></div>
 									<div class="capacity-number" data-target="800000">±</div>
 								</div>
 							</div>
@@ -211,12 +213,12 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="section-title">
-					<h2>Our Brand</h2>
+					<h2><?= $this->lang->line('brand_title') ?></h2>
 					<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
-					<p>Each brand we present is designed to meet the needs of musicians of all levels — from beginners to professionals. With their own characteristics and strengths, Bromo, Valencia, and Mahalo represent our dedication to quality, innovation, and love of music.</p>
+					<p><?= $this->lang->line('brand_desc') ?></p>
 					<br>
 					<p>
-						<b>If you'd love to explore all of our products, discover their full specifications, and find our trusted distributors, please feel free to visit our official website below.</b>
+						<b><?= $this->lang->line('brand_desc2') ?></b>
 					</p>
 
 				</div>
@@ -249,10 +251,10 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul> -->
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://www.bromoguitars.com">Check our website</a>
+						<a class="btn" target="_blank" href="https://www.bromoguitars.com"><?= $this->lang->line('button_check_website') ?></a>
 					</div>
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://www.bromoguitars.com/contact">Bromo Distributors</a>
+						<a class="btn" target="_blank" href="https://www.bromoguitars.com/contact"><?= $this->lang->line('bromo_distribution') ?></a>
 					</div>
 
 					<!-- Table Bottom -->
@@ -281,11 +283,11 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul> -->
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://www.mahaloukuleles.com">Check our website</a>
+						<a class="btn" target="_blank" href="https://www.mahaloukuleles.com"><?= $this->lang->line('button_check_website') ?></a>
 
 					</div>
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://mahaloukuleles.com/distributors-2/">Mahalo Distributors</a>
+						<a class="btn" target="_blank" href="https://mahaloukuleles.com/distributors-2/"><?= $this->lang->line('mahalo_distribution') ?></a>
 					</div>
 					<!-- Table Bottom -->
 				</div>
@@ -311,11 +313,11 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul> -->
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://www.valenciaguitars.com">Check our website</a>
+						<a class="btn" target="_blank" href="https://www.valenciaguitars.com"><?= $this->lang->line('button_check_website') ?></a>
 
 					</div>
 					<div class="table-bottom">
-						<a class="btn" target="_blank" href="https://valenciaguitars.com/id/distributors/">Valencia Distributors</a>
+						<a class="btn" target="_blank" href="https://valenciaguitars.com/id/distributors/"><?= $this->lang->line('valencia_distribution') ?></a>
 					</div>
 					<!-- Table Bottom -->
 				</div>
@@ -336,7 +338,7 @@
 				<div class="section- title">
 					<!-- <h2>Our Product</h2> -->
 					<!-- <img src="<?= base_url('assets/img/section-img.png') ?>" alt="#"> -->
-					<h5>We don’t just make instruments — we build connections between players and their audiences. Our guitars and ukuleles are crafted with precision, using the finest woods and craftsmanship. From the first notes to the big stage, our products are ready to accompany you on every musical journey.</h5>
+					<h5><?= $this->lang->line('desc_under_brand') ?></h5>
 				</div>
 			</div>
 		</div>
@@ -353,10 +355,8 @@
 				<div class="single-fun">
 					<i class="icofont icofont-globe"></i>
 					<div class="content">
-						<span class="">Partner & Export Destination</span>
-						<p>Our products have crossed national and cultural boundaries, inspiring musicians all over the world. <br>
-							We are proud to be partners of various brands and distributors in the music world <br>
-							Our commitment to quality has opened the door to exports to various countries and established long-term cooperation with trusted partners.</p>
+						<span class=""><?= $this->lang->line('PE_title') ?></span>
+						<p><?= $this->lang->line('PE_desc') ?></p>
 					</div>
 				</div>
 				<!-- End Single Fun -->
@@ -372,9 +372,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="section-title">
-					<h2>Contact Us</h2>
+					<h2><?= $this->lang->line('contact_title') ?></h2>
 					<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
-					<p>Contact us for more information about products, business cooperation, or special requests. Our team is ready to assist you.</p>
+					<p><?= $this->lang->line('contact_desc') ?></p>
 
 
 				</div>
@@ -425,7 +425,7 @@
 								<i class="icofont-map"></i>
 							</div>
 							<div class="single-content">
-								<h4>Jl. Rembang Industri Raya No.45, Jati, Pandean, Kec. Rembang, Pasuruan, Jawa Timur 67152</h4>
+								<h4>Jl. Rembang Industri Raya No.45, Jati, Pandean, Kec. Rembang, Pasuruan, <?= $this->lang->line('alamat') ?>  67152</h4>
 								<!-- <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a> -->
 							</div>
 						</div>
