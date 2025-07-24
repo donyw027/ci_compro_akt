@@ -38,11 +38,11 @@
                 $no = 1;
                 if ($users) :
                     foreach ($users as $user) :
-                        ?>
+                ?>
                         <tr>
                             <td><?= $no++; ?></td>
                             <td>
-                                <img width="30" src="<?= base_url() ?>assets/img/avatar/<?= $user['foto'] ?>" alt="<?= $user['nama']; ?>" class="img-thumbnail rounded-circle">
+                                <img width="30" src="<?= base_url('assets/sbadmin2/img/undraw_profile.svg') ?>" alt="<?= $user['nama']; ?>" class="img-thumbnail rounded-circle">
                             </td>
                             <td><?= $user['nama']; ?></td>
                             <td><?= $user['username']; ?></td>
@@ -56,7 +56,7 @@
                             </td>
                         </tr>
                     <?php endforeach;
-                    else : ?>
+                else : ?>
                     <tr>
                         <td colspan="8" class="text-center">Silahkan tambahkan user baru</td>
                     </tr>

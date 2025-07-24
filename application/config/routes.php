@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -58,4 +58,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home']  = 'welcome/home';
 $route['about'] = 'welcome/about';
 $route['career'] = 'welcome/career';
-$route['contact'] = 'welcome/contact'; // jika ada
+$route['contact'] = 'welcome/contact';
+$route['login'] = 'auth/index';
+$route['dashboard'] = 'auth/index';
+
+$route['user'] = 'user';
+$route['changepass'] = 'User/ubahpassword';

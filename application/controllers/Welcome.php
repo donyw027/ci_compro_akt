@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -19,82 +20,86 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-    
 
 
-	 public function __construct()
-	 {
-		 parent::__construct();
- 
-		 // Cek jika tidak ada bahasa tersimpan, default ke indonesian
-		 if (!$this->session->userdata('site_lang')) {
-			 $this->session->set_userdata('site_lang', 'indonesian');
-		 }
- 
-		 // Load bahasa sesuai session
-		 $this->lang->load('web_lang', $this->session->userdata('site_lang'));
-	 }
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_model', 'admin');
+		$this->load->library('form_validation');
+
+		// Cek jika tidak ada bahasa tersimpan, default ke indonesian
+		if (!$this->session->userdata('site_lang')) {
+			$this->session->set_userdata('site_lang', 'indonesian');
+		}
+
+		// Load bahasa sesuai session
+		$this->lang->load('web_lang', $this->session->userdata('site_lang'));
+	}
 
 
-	 public function change_language($lang)
-    {
-        // Set session sesuai pilihan bahasa
-        if ($lang == 'en') {
-            $this->session->set_userdata('site_lang', 'english');
-        } else {
-            $this->session->set_userdata('site_lang', 'indonesian');
-        }
+	public function change_language($lang)
+	{
+		// Set session sesuai pilihan bahasa
+		if ($lang == 'en') {
+			$this->session->set_userdata('site_lang', 'english');
+		} else {
+			$this->session->set_userdata('site_lang', 'indonesian');
+		}
 
-        redirect($_SERVER['HTTP_REFERER']); // kembali ke halaman sebelumnya
-    }
+		redirect($_SERVER['HTTP_REFERER']); // kembali ke halaman sebelumnya
+	}
 
 	public function index()
 	{
 		$data['title'] = 'AKT Indonesia';
 
-        // Load layout
-        $this->load->view('head_foot/header', $data);
-        $this->load->view('home');
-        $this->load->view('head_foot/footer');
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('home');
+		$this->load->view('head_foot/footer');
 	}
 
 	public function home()
 	{
 		$data['title'] = 'AKT Indonesia';
 
-        // Load layout
-        $this->load->view('head_foot/header', $data);
-        $this->load->view('home');
-        $this->load->view('head_foot/footer');
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('home');
+		$this->load->view('head_foot/footer');
 	}
 
 	public function about()
 	{
 		$data['title'] = 'AKT Indonesia | About';
 
-        // Load layout
-        $this->load->view('head_foot/header', $data);
-        $this->load->view('about');
-        $this->load->view('head_foot/footer');
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('about');
+		$this->load->view('head_foot/footer');
 	}
 
 	public function career()
 	{
+		$this->load->helper('text');
 		$data['title'] = 'AKT Indonesia | Career';
+		$data['loker'] = $this->admin->get('loker');
 
-        // Load layout
-        $this->load->view('head_foot/header', $data);
-        $this->load->view('career');
-        $this->load->view('head_foot/footer');
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('career');
+		$this->load->view('head_foot/footer');
 	}
 
 	public function contact()
 	{
 		$data['title'] = 'AKT Indonesia | Contact';
 
-        // Load layout
-        $this->load->view('head_foot/header', $data);
-        $this->load->view('contact');
-        $this->load->view('head_foot/footer');
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('contact');
+		$this->load->view('head_foot/footer');
 	}
 }

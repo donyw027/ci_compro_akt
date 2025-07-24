@@ -1,8 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
-
+class Auth extends CI_Controller
+{
     public function __construct()
     {
         parent::__construct();
@@ -10,8 +10,6 @@ class Auth extends CI_Controller {
         $this->load->model('Auth_model', 'auth');
         $this->load->model('Admin_model', 'admin');
     }
-
-    
 
     private function _has_login()
     {
@@ -28,8 +26,8 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
 
         if ($this->form_validation->run() == false) {
-            $data = [];
-            $this->load->view('auth/login', $data);
+            $data['title'] = 'Login | AKT Career';
+            $this->template->load('templates/auth', 'admin/login', $data);
         } else {
             $input = $this->input->post(null, true);
 
@@ -50,9 +48,15 @@ class Auth extends CI_Controller {
                             'timestamp' => time()
                         ];
 
-                        $
+                        // $tgl = date('d M Y | H:i');
+                        // $data_log = [
+                        //     'tanggal'       => $tgl,
+                        //     'aksi'       => 'Login kedalam sistem informasi',
+                        //     'aktor'       => $user_db['nama']
+                        // ];
+                        // $this->admin->insert('log_s', $data_log);
                         $this->session->set_userdata('login_session', $userdata);
-                        redirect('dashboard');
+                        redirect('auth/dashboard');
                     }
                 } else {
                     set_pesan('password salah', false);
@@ -65,21 +69,25 @@ class Auth extends CI_Controller {
         }
     }
 
-    public function login() {
-        $this->load->view('admin/login');
-    }
-    
-    // public function dashboard() {
-    //     $this->template->load('admin/dashboard');
-
-    // }
-
     public function logout()
-{
-    $this->session->unset_userdata('login_session');
-    $this->session->sess_destroy();
-    redirect('auth/login');
-}
+    {
+        $this->session->unset_userdata('login_session');
+        session_destroy(); // tambahkan ini untuk benar-benar menghancurkan sesi
+        set_pesan('anda telah berhasil logout');
+        redirect('login'); // redirect ke halaman login
+    }
 
-    
+
+    public function dashboard()
+    {
+
+        $session = $this->session->userdata('login_session');
+        if (!$session) {
+            redirect('login'); // redirect ke halaman login
+        }
+
+        $data['title'] = "Dashboard | AKT Career";
+        $role = $this->session->userdata('login_session')['role'];
+        $this->template->load('templates/dashboard', 'admin/beranda', $data);
+    }
 }
