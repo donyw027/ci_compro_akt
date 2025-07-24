@@ -13,6 +13,8 @@
 	<!-- Title -->
 	<title><?= $title; ?></title>
 
+	
+
 	<!-- Favicon -->
 	<link rel="icon" href="<?= base_url('assets/img/favicon.png') ?>">
 

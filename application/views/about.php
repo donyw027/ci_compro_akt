@@ -36,7 +36,7 @@
 			<div class="col-lg-8 col-md-12 col-12">
 				<div class="col-lg-12">
 					<div class="section- title">
-						<br>
+						
 						<h2><?= $this->lang->line('about_title') ?> </h2>
 						<img src="<?= base_url('assets/img/section-img.png') ?>" alt="#">
 						<p style="text-align: justify;">

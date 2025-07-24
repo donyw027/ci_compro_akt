@@ -128,12 +128,12 @@
 						<div class="row justify-content-center">
 
 							<!-- Item -->
-							<div class="col-lg-2 col-6 mb-4">
+							<div class="col-lg-3 col-10 mb-4">
 								<div class="capacity-box">
 									<div class="capacity-title"><?= $this->lang->line('employes') ?></div>
-									<div class="capacity-number" data-target="200">±</div>
-									Sampai
-									<div class="capacity-number" data-target="500">±</div>
+									<div class="capacity-number" data-target="200" style="display:inline-block;">±</div>
+									<div style="display:inline-block;font-size: 16pt;" ><b>Sampai</b></div>
+									<div class="capacity-number" data-target="500" style="display:inline-block;">±</div>
 								</div>
 							</div>
 
