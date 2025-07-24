@@ -25,7 +25,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Master
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
