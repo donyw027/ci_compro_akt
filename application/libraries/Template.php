@@ -1,18 +1,18 @@
 <?php
 
-class Template
-{
-    var $template_data = [];
+class Template {
 
-    function set($name, $value)
-    {
-        $this->template_data[$name] = $value;
+    protected $CI;
+
+    public function __construct() {
+        $this->CI =& get_instance();
     }
 
-    function load($template = '', $view = '', $view_data = [], $return = false)
-    {
-        $this->CI = &get_instance();
-        $this->set('contents', $this->CI->load->view($view, $view_data, TRUE));
-        return $this->CI->load->view($template, $this->template_data, $return);
+    public function load($content_view, $data = null) {
+        $this->CI->load->view('admin/layout/head', $data);
+        $this->CI->load->view('admin/layout/side', $data);
+        $this->CI->load->view('admin/layout/nav', $data);
+        $this->CI->load->view($content_view, $data);
+        $this->CI->load->view('admin/layout/footer', $data);
     }
 }

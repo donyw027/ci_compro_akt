@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Login | AKT Career</title>
-	<link rel="icon" href="<?= base_url('assets/img/favicon.png') ?>">
+    <link rel="icon" href="<?= base_url('assets/img/favicon.png') ?>">
 
 
     <!-- FontAwesome -->
@@ -45,25 +45,27 @@
                                         <h1 class="h4 text-gray-900 mb-1">Welcome Back!</h1>
                                         <h3 class="h5 text-gray-900 mb-4">AKT Career</h3>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            
-                                        </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
-                                        
+                                    <?= form_open('', ['class' => 'user']); ?>
+                                    <div class="form-group">
+                                        <input value="<?= set_value('username'); ?>" type="text" class="form-control form-control-user"
+                                            id="username" name="username" aria-describedby="emailHelp"
+                                            placeholder="Enter Username...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input value="<?= set_value('password'); ?>" name="password" type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </button>
+                                    <?= form_close(); ?>
+
+
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -77,13 +79,12 @@
     </div>
 
     <script src="<?= base_url('assets/sbadmin2/vendor/jquery/jquery.min.js') ?>"></script>
-<script src="<?= base_url('assets/sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-<script src="<?= base_url('assets/sbadmin2/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
-<script src="<?= base_url('assets/sbadmin2/js/sb-admin-2.min.js') ?>"></script>
+    <script src="<?= base_url('assets/sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('assets/sbadmin2/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+    <script src="<?= base_url('assets/sbadmin2/js/sb-admin-2.min.js') ?>"></script>
 
 
 
 </body>
 
 </html>
-

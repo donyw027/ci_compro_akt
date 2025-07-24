@@ -11,6 +11,8 @@ class Auth extends CI_Controller {
         $this->load->model('Admin_model', 'admin');
     }
 
+    
+
     private function _has_login()
     {
         if ($this->session->has_userdata('login_session')) {
@@ -26,7 +28,8 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
 
         if ($this->form_validation->run() == false) {
-            $this->template->load('admin/login', 'templates/auth', $data);
+            $data = [];
+            $this->load->view('auth/login', $data);
         } else {
             $input = $this->input->post(null, true);
 
@@ -66,20 +69,17 @@ class Auth extends CI_Controller {
         $this->load->view('admin/login');
     }
     
-    public function dashboard() {
-        $this->load->view('admin/layout/head');
-        $this->load->view('admin/layout/side');
-        $this->load->view('admin/layout/nav');
-        $this->load->view('admin/dashboard');
-        $this->load->view('admin/layout/footer');
+    // public function dashboard() {
+    //     $this->template->load('admin/dashboard');
 
-    }
+    // }
 
     public function logout()
-    {
-        $this->session->unset_userdata('login_session');
-        set_pesan('anda telah berhasil logout');
-        redirect('auth');
-    }
+{
+    $this->session->unset_userdata('login_session');
+    $this->session->sess_destroy();
+    redirect('auth/login');
+}
+
     
 }
