@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Loker extends CI_Controller
+class Kandidat extends CI_Controller
 {
     public function __construct()
     {
@@ -17,31 +17,14 @@ class Loker extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Loker";
+        $data['title'] = "Kandidat";
         $data['loker'] = $this->admin->get('loker');
-        // $this->template->load('templates/dashboard', 'loker/data', $data);
-
-        $this->load->view('career', $data);  
-    }
-
-    public function admin_index()
-    {
-        $data['title'] = "Loker";
-        $data['loker'] = $this->admin->get('loker');
-        $this->template->load('templates/dashboard', 'loker/data', $data);
+        $this->template->load('templates/dashboard', 'kandidat/data', $data);
 
     }
 
-    public function log()
-    {
-
-        $data['title'] = "Log Sistem";
-        $role = $this->session->userdata('login_session')['role'];
-
-        $data['log'] = $this->admin->log_desc();
-
-        $this->template->load('templates/dashboard', 'log/data', $data);
-    }
+    
+   
 
     private function _validasi($mode)
     {
@@ -67,8 +50,6 @@ class Loker extends CI_Controller
         } else {
             $input = $this->input->post(null, true);
             $input_data = [
-                'tgl_loker'          => date('d-m-y'),
-
                 'posisi'          => $input['posisi'],
                 'deskripsi'      => $input['deskripsi'],
                 'batas_lamar'         => $input['batas_lamar'],

@@ -41,7 +41,7 @@
 								<div class="col-md-4 mb-4 ">
 									<div class="card h-100 shadow-sm">
 										<div class="card-header">
-											<h5 class="card-title"><?= $lowongan['posisi'] ?>
+											<h5 class="card-title"><?= $lowongan['posisi'] ?> <br>
 												<span class="badge badge-success">Open</span>
 											</h5>
 											<p class="card-text"><strong>Batas Lamar:</strong> <?= $lowongan['batas_lamar'] ?></p>
@@ -49,15 +49,15 @@
 
 										</div>
 										<div class="card-body">
-											<b>Deskripsi:</b>
-											<p class="card-text" style="min-height: 100px;"><?= $deskripsi_limit ?>...</p>
+											<!-- <b>Deskripsi:</b> -->
+											<!-- <p class="card-text" style="min-height: 150px;"><?= $deskripsi_limit ?>...</p> -->
 
 											<!-- Tombol Modal -->
 											<button type="button" class="btn btn-sm btn-outline-primary mt-2 mr-2" data-toggle="modal" data-target="#<?= $unique_id ?>">
-												Detail
-											</button>
+												Detail Lowongan
+											</button> <br>
 
-											<button type="button" class="btn btn-info mt-2">Apply Now</button>
+											<a style="color:white;" href="<?= base_url('welcome/applyjob') ?>" type="button" class="btn btn-info mt-2">Apply Now</a>
 										</div>
 									</div>
 								</div>
@@ -73,9 +73,12 @@
 												</button>
 											</div>
 											<div class="modal-body">
-												<?= nl2br($lowongan['deskripsi']) ?>
+												<?= $lowongan['deskripsi']; ?>
 											</div>
 											<div class="modal-footer">
+											<a style="color:white;" href="<?= base_url('welcome/applyjob') ?>" type="button" class="btn btn-info ">Apply Now</a>
+											
+
 												<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 											</div>
 										</div>

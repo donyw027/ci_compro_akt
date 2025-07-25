@@ -102,4 +102,14 @@ class Welcome extends CI_Controller
 		$this->load->view('contact');
 		$this->load->view('head_foot/footer');
 	}
+
+	public function applyjob()
+	{
+		$data['title'] = 'AKT Indonesia | Contact';
+
+		// Load layout
+		$this->load->view('head_foot/header', $data);
+		$this->load->view('applyjob');
+		$this->load->view('head_foot/footer');
+	}
 }

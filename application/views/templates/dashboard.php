@@ -27,16 +27,13 @@
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
-    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script> -->
-    <!-- <script src="//cdn.ckeditor.com/4.22.1/basic/ckeditor.js"></script> -->
-    <!-- <script src="//cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> -->
+  
     <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
 
+    <!-- <script src="//cdn.ckeditor.com/4.25.1-lts/full/ckeditor.js"></script> -->
 
-    <!-- sumer note -->
 
-    <!-- <script src="https://cdn.ckeditor.com/4.24.0-lts/standard/ckeditor.js"></script> -->
-
+   
     <style>
         #accordionSidebar,
         .topbar {
@@ -107,28 +104,30 @@
             </li> -->
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Master</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url('Loker/admin_index') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Career</span></a>
+                    <span>Data Loker</span></a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url('kandidat') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>All Kandidat</span></a>
+                    <span>Kandidat</span></a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Calon Kandidat Sortir</span></a>
-            </li>
+            </li> -->
+
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
                 User Managemen
