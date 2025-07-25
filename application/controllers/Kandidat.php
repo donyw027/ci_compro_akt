@@ -23,6 +23,15 @@ class Kandidat extends CI_Controller
 
     }
 
+
+    public function kandidat_index()
+    {
+        $data['title'] = "Kandidat";
+        $data['loker'] = $this->admin->get('loker');
+        $this->template->load('templates/dashboard', 'kandidat/data', $data);
+
+    }
+
     
    
 
