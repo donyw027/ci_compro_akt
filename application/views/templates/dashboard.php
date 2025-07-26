@@ -27,13 +27,13 @@
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/sbadmin2/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
-  
+
     <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
 
     <!-- <script src="//cdn.ckeditor.com/4.25.1-lts/full/ckeditor.js"></script> -->
 
 
-   
+
     <style>
         #accordionSidebar,
         .topbar {
@@ -114,13 +114,23 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Loker/admin_index') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Data Loker</span></a>
+                    <span>Master Loker</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('kandidat') ?>">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Kandidat</span></a>
+                <a class="nav-link" href="<?= base_url('cek_sortir/sortir') ?>">
+                    <i class="fas fa-fw fa-filter"></i>
+                    <span>Sortir Kandidat</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('cek_sortir/interview') ?>">
+                    <i class="fas fa-fw fa-check"></i>
+                    <span>Kandidat Interview</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('cek_sortir/tidak_relevan') ?>">
+                    <i class="fas fa-fw fa-ban"></i>
+                    <span>Kandidat Tidak Relevan</span></a>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
@@ -135,7 +145,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= site_url('user') ?>">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>User</span></a>
             </li>
 
@@ -400,9 +410,12 @@
 
         $(document).ready(function() {
             var table = $('#dataTable4').DataTable({
+                scrollX: true, // Enable horizontal scroll
+                responsive: false, // Disable DataTables responsive mode (biar kolom tidak jadi child)
                 buttons: [],
                 dom: "<'row px-2 px-md-4 pt-2'<'col-md-3'l><'col-md-5 text-center'B><'col-md-4'f>>" +
-                    "<'row'<'col-md-11'tr>>",
+                    "<'row'<'col-md-12'tr>>" + // ubah col-md-11 jadi col-md-12 biar full lebar
+                    "<'row px-2 px-md-4 py-3'<'col-md-5'i><'col-md-7'p>>",
                 lengthMenu: [
                     [5, 25, 50, 100, -1],
                     [5, 25, 50, 100, "All"]
@@ -414,7 +427,7 @@
                 }]
             });
 
-            table.buttons().container().appendTo('#dataTable_wrapper .col-md-5:eq(0)');
+            table.buttons().container().appendTo('#dataTable4_wrapper .col-md-5:eq(0)');
         });
     </script>
 

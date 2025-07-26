@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col">
                 <h4 class="h5 align-middle m-0 font-weight-bold text-primary">
-                    Data Loker
+                    Kandidat Tidak Relevan
                 </h4>
             </div>
-            <div class="col-auto">
+            <!-- <div class="col-auto">
                 <a href="<?= base_url('Loker/add') ?>" class="btn btn-sm btn-primary btn-icon-split">
                     <span class="icon">
                         <i class="fa fa-user-plus"></i>
@@ -16,21 +16,22 @@
                         Tambah Loker
                     </span>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table table-striped dt-responsive nowrap" id="dataTable4" style="width: 100%;">
+        <table class="table table-striped dt-responsive nowrap" style="width: 100%;" id="dataTable4">
             <thead>
                 <tr>
                     <th width="30">No.</th>
-                    <th>posisi</th>
+                    <th width="100">Tgl Loker</th>
+
+                    <th width="200">posisi</th>
                     <!-- <th>deskripsi</th> -->
-                    <th>batas_lamar</th>
-                    <th>status</th>
+                    <th>Cek Kandidat</th>
 
 
-                    <th>Aksi</th>
+                    <!-- <th>Aksi</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -41,15 +42,17 @@
                 ?>
                         <tr>
                             <td><?= $no++; ?></td>
+                            <td><?= $lokeri['tgl_loker']; ?></td>
+
                             <td><?= $lokeri['posisi']; ?></td>
-                            <!-- <td><?= $lokeri['deskripsi']; ?></td> -->
-                            <td><?= $lokeri['batas_lamar']; ?></td>
-                            <td><?= $lokeri['status']; ?></td>
                             <td>
+                                <a href="<?= base_url('cek_sortir/tr_index/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a>
+                            </td>
+                            <!-- <td>
 
                                 <a href="<?= base_url('loker/edit/') . $lokeri['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>
                                 <a onclick="return confirm('Yakin ingin menghapus data?')" href="<?= base_url('loker/delete/') . $lokeri['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
-                            </td>
+                            </td> -->
                         </tr>
                     <?php endforeach;
                 else : ?>

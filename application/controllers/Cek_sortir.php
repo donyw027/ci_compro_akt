@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Kandidat extends CI_Controller
+class Cek_sortir extends CI_Controller
 {
     public function __construct()
     {
@@ -15,25 +15,57 @@ class Kandidat extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function sortir()
     {
-        $data['title'] = "Kandidat";
+        $data['title'] = "Cek Sortir";
         $data['loker'] = $this->admin->get('loker');
-        $this->template->load('templates/dashboard', 'kandidat/data', $data);
+        $this->template->load('templates/dashboard', 'cek_sortir/data', $data);
+    }
 
+    public function interview()
+    {
+        $data['title'] = "Cek Sortir";
+        $data['loker'] = $this->admin->get('loker');
+        $this->template->load('templates/dashboard', 'interview/data', $data);
+    }
+
+    public function tidak_relevan()
+    {
+        $data['title'] = "Cek Sortir";
+        $data['loker'] = $this->admin->get('loker');
+        $this->template->load('templates/dashboard', 'tidak_relevan/data', $data);
     }
 
 
-    public function kandidat_index()
+    public function kandidat_index($id_loker = null)
     {
-        $data['title'] = "Kandidat";
-        $data['loker'] = $this->admin->get('loker');
-        $this->template->load('templates/dashboard', 'kandidat/data', $data);
+        $data['title'] = "Sortir Kandidat";
+        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'sortir');
+        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
 
+        $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
     }
 
-    
-   
+    public function interview_index($id_loker = null)
+    {
+        $data['title'] = "Kandidat Interview";
+        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'interview');
+        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+        $this->template->load('templates/dashboard', 'interview/datainterview', $data);
+    }
+
+    public function tr_index($id_loker = null)
+    {
+        $data['title'] = "Kandidat Tidak Relevan";
+        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'tidak relevan');
+        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+        $this->template->load('templates/dashboard', 'tidak_relevan/data_tr', $data);
+    }
+
+
+
 
     private function _validasi($mode)
     {
@@ -45,7 +77,6 @@ class Kandidat extends CI_Controller
         } else {
             $db = $this->admin->get('loker', ['id' => $this->input->post('id', true)]);
             $username = $this->input->post('posisi', true);
-            
         }
     }
 
@@ -113,7 +144,7 @@ class Kandidat extends CI_Controller
         }
         redirect('loker/admin_index');
     }
-   
+
 
     public function toggle($getId)
     {
@@ -127,6 +158,4 @@ class Kandidat extends CI_Controller
         }
         redirect('user');
     }
-
-    
 }

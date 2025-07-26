@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col">
                 <h4 class="h5 align-middle m-0 font-weight-bold text-primary">
-                    Sortir <?= $loker['posisi']; ?>
+                    Tidak Relevan | <?= $loker['posisi']; ?>
                 </h4>
             </div>
             <!-- <div class="col-auto">
@@ -136,9 +136,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn btn-sm  btn-secondary" data-dismiss="modal">Tutup</button>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -149,8 +147,8 @@
 
                             </td>
                             <td>
+                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-secondary">Sortir<i class="fa fa-fw fa-filter"></i></a>
                                 <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
-                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
                             </td>
                         </tr>
 

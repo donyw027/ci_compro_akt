@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col">
                 <h4 class="h5 align-middle m-0 font-weight-bold text-primary">
-                    Cek Kandidat
+                    Sortir Kandidat
                 </h4>
             </div>
             <!-- <div class="col-auto">
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table table-striped dt-responsive nowrap" id="dataTable">
+        <table class="table table-striped dt-responsive nowrap" style="width: 100%;" id="dataTable4">
             <thead>
                 <tr>
                     <th width="30">No.</th>
@@ -46,7 +46,7 @@
 
                             <td><?= $lokeri['posisi']; ?></td>
                             <td>
-                                <a href="<?= base_url('loker/edit/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a>
+                                <a href="<?= base_url('cek_sortir/kandidat_index/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a>
                             </td>
                             <!-- <td>
 

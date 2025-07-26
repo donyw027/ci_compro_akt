@@ -9,7 +9,7 @@
                         </h4>
                     </div>
                     <div class="col-auto">
-                        <a href="<?= base_url('loker/admin_index') ?>" class="btn btn-sm btn-secondary btn-icon-split">
+                        <a href="<?= base_url('stok') ?>" class="btn btn-sm btn-secondary btn-icon-split">
                             <span class="icon">
                                 <i class="fa fa-arrow-left"></i>
                             </span>
@@ -22,48 +22,40 @@
             </div>
             <div class="card-body pb-2">
                 <?= $this->session->flashdata('pesan'); ?>
-                <?= form_open('', [], ['id' => $loker['id']]); ?>
-
+                <?= form_open('', [], ['id' => $pkwt['id']]); ?>
                 <div class="row form-group">
-                    <label class="col-md-2 text-md-right" for="posisi">posisi</label>
+                    <label class="col-md-2 text-md-right" for="isi_pkwt">isi_pkwt</label>
                     <div class="col-md-10">
-                        <input value="<?= set_value('posisi', $loker['posisi']); ?>" type="text" id="posisi" name="posisi" class="form-control" placeholder="posisi">
-                        <?= form_error('posisi', '<span class="text-danger small">', '</span>'); ?>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <label class="col-md-2 text-md-right" for="deskripsi">deskripsi</label>
-                    <div class="col-md-10">
-                        <textarea value="<?= set_value('deskripsi', $loker['deskripsi']); ?>" name="deskripsi" id="editor" class="form-control">
-                        <?= set_value('deskripsi', $loker['deskripsi']); ?>
+                        <textarea value="<?= set_value('isi_pkwt', $pkwt['isi_pkwt']); ?>" name="isi_pkwt" id="editor" class="form-control">
+                        <?= set_value('isi_pkwt', $pkwt['isi_pkwt']); ?>
                     </textarea>
-                        <?= form_error('deskripsi', '<span class="text-danger small">', '</span>'); ?>
+                        <?= form_error('isi_pkwt', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-md-2 text-md-right" for="batas_lamar">batas_lamar</label>
+                    <label class="col-md-2 text-md-right" for="nama_hrd">nama_hrd</label>
                     <div class="col-md-10">
-                        <input value="<?= set_value('batas_lamar', $loker['batas_lamar']); ?>" type="date" id="batas_lamar" name="batas_lamar" class="form-control" placeholder="batas_lamar">
-                        <?= form_error('batas_lamar', '<span class="text-danger small">', '</span>'); ?>
+                        <input value="<?= set_value('nama_hrd', $pkwt['nama_hrd']); ?>" type="text" id="nama_hrd" name="nama_hrd" class="form-control" placeholder="nama_hrd">
+                        <?= form_error('nama_hrd', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-md-2 text-md-right" for="status">Status</label>
+                    <label class="col-md-2 text-md-right" for="alamat_hrd">alamat_hrd</label>
                     <div class="col-md-10">
-                        <select id="status" name="status" class="form-control">
-                            <option value="">--Pilih Status--</option>
-                            <option value="open" <?= set_select('status', 'open', ($loker['status'] == 'open')); ?>>Open</option>
-                            <option value="close" <?= set_select('status', 'close', ($loker['status'] == 'close')); ?>>Close</option>
-                        </select>
-                        <?= form_error('status', '<span class="text-danger small">', '</span>'); ?>
+                        <input value="<?= set_value('alamat_hrd', $pkwt['alamat_hrd']); ?>" type="text" id="alamat_hrd" name="alamat_hrd" class="form-control" placeholder="alamat_hrd">
+                        <?= form_error('alamat_hrd', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
-
-
+                <div class="row form-group">
+                    <label class="col-md-2 text-md-right" for="ttd_hrd">ttd_hrd</label>
+                    <div class="col-md-10">
+                        <input value="<?= set_value('ttd_hrd', $pkwt['ttd_hrd']); ?>" type="text" id="ttd_hrd" name="ttd_hrd" class="form-control" placeholder="ttd_hrd">
+                        <?= form_error('ttd_hrd', '<span class="text-danger small">', '</span>'); ?>
+                    </div>
+                </div>
 
 
                 <br>
