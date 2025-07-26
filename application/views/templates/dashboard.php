@@ -66,7 +66,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="<?= site_url('dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -251,7 +251,7 @@
             <footer class="sticky-footer bg-light">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Reminder PKWT AKT Indonesia | Doni AKTID 2024</span>
+                        <span>Copyright &copy; Career AKT Indonesia | Doni AKTID 2024</span>
                     </div>
                 </div>
             </footer>

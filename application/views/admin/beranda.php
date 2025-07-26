@@ -27,7 +27,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Lowongan Publish</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_open_loker; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -45,7 +45,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 Lowongan Tidak Publish</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">100</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_close_loker; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>

@@ -29,6 +29,7 @@
                     <th width="200">posisi</th>
                     <!-- <th>deskripsi</th> -->
                     <th>Cek Kandidat</th>
+                    <th>Status Lowongan</th>
 
 
                     <!-- <th>Aksi</th> -->
@@ -48,6 +49,8 @@
                             <td>
                                 <a href="<?= base_url('cek_sortir/kandidat_index/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a>
                             </td>
+                            <td><?= $lokeri['status']; ?></td>
+
                             <!-- <td>
 
                                 <a href="<?= base_url('loker/edit/') . $lokeri['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>

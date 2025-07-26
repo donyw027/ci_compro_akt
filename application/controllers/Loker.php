@@ -21,7 +21,7 @@ class Loker extends CI_Controller
         $data['loker'] = $this->admin->get('loker');
         // $this->template->load('templates/dashboard', 'loker/data', $data);
 
-        $this->load->view('career', $data);  
+        $this->load->view('career', $data);
     }
 
     public function admin_index()
@@ -29,7 +29,6 @@ class Loker extends CI_Controller
         $data['title'] = "Loker";
         $data['loker'] = $this->admin->get('loker');
         $this->template->load('templates/dashboard', 'loker/data', $data);
-
     }
 
     public function log()
@@ -53,7 +52,6 @@ class Loker extends CI_Controller
         } else {
             $db = $this->admin->get('loker', ['id' => $this->input->post('id', true)]);
             $username = $this->input->post('posisi', true);
-            
         }
     }
 
@@ -123,7 +121,7 @@ class Loker extends CI_Controller
         }
         redirect('loker/admin_index');
     }
-   
+
 
     public function toggle($getId)
     {
@@ -137,6 +135,4 @@ class Loker extends CI_Controller
         }
         redirect('user');
     }
-
-    
 }

@@ -26,6 +26,8 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<!-- <h2>Career </h2> -->
+				<?= $this->session->flashdata('pesan'); ?>
+
 
 
 				<div class="container my-5">
@@ -57,7 +59,7 @@
 												Detail Lowongan
 											</button> <br>
 
-											<a style="color:white;" href="<?= base_url('welcome/applyjob') ?>" type="button" class="btn btn-info mt-2">Apply Now</a>
+											<a style="color:white;" href="<?= base_url('welcome/applyjob/') . $lowongan['id'] ?>" type="button" class="btn btn-info mt-2">Apply Now</a>
 										</div>
 									</div>
 								</div>
@@ -76,8 +78,8 @@
 												<?= $lowongan['deskripsi']; ?>
 											</div>
 											<div class="modal-footer">
-											<a style="color:white;" href="<?= base_url('welcome/applyjob') ?>" type="button" class="btn btn-info ">Apply Now</a>
-											
+												<a style="color:white;" href="<?= base_url('welcome/applyjob/') .  $lowongan['id']  ?>" type="button" class="btn btn-info ">Apply Now</a>
+
 
 												<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 											</div>

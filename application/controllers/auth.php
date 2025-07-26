@@ -86,7 +86,9 @@ class Auth extends CI_Controller
             redirect('login'); // redirect ke halaman login
         }
 
-        $data['title'] = "Dashboard | AKT Career";
+        $data['total_open_loker'] = $this->db->where('status', 'open')->from('loker')->count_all_results();
+        $data['total_close_loker'] = $this->db->where('status', 'close')->from('loker')->count_all_results();
+        $data['title'] = "Dashboard";
         $role = $this->session->userdata('login_session')['role'];
         $this->template->load('templates/dashboard', 'admin/beranda', $data);
     }

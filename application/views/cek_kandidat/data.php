@@ -44,7 +44,14 @@
                             <td><?= $kandidati['pendidikan']; ?></td>
                             <td><?= $kandidati['jurusan']; ?></td>
 
-                            <td><?= $kandidati['no_wa']; ?></td>
+                            <td>
+                                <a class="btn btn-sm btn-dark" href="https://wa.me/<?= $kandidati['no_wa']; ?>"
+                                    target="_blank" rel="noopener"
+                                    title="Chat WhatsApp">
+                                    <i class="fa fa-phone"></i>
+                                    <?= htmlspecialchars($kandidati['no_wa']); ?>
+                                </a>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalDetail<?= $kandidati['id'] ?>">
                                     Detail Kandidat <i class="fa fa-fw fa-book"></i>

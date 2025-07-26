@@ -44,7 +44,14 @@
                             <td><?= $kandidati['pendidikan']; ?></td>
                             <td><?= $kandidati['jurusan']; ?></td>
 
-                            <td><?= $kandidati['no_wa']; ?></td>
+                            <td>
+                                <a class="btn btn-sm btn-dark" href="https://wa.me/<?= $kandidati['no_wa']; ?>"
+                                    target="_blank" rel="noopener"
+                                    title="Chat WhatsApp">
+                                    <i class="fa fa-phone"></i>
+                                    <?= htmlspecialchars($kandidati['no_wa']); ?>
+                                </a>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalDetail<?= $kandidati['id'] ?>">
                                     Detail Kandidat <i class="fa fa-fw fa-book"></i>
@@ -136,9 +143,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn btn-sm  btn-secondary" data-dismiss="modal">Tutup</button>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
                                             </div>
                                         </div>
                                     </div>
