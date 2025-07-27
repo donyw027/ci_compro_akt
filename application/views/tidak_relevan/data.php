@@ -47,10 +47,21 @@
                             <td><?= $lokeri['tgl_loker']; ?></td>
 
                             <td><?= $lokeri['posisi']; ?></td>
+                            <?php
+                            if ($lokeri['status'] == "open") {
+                            ?>
+                                <td class="badge-success"><?= $lokeri['status']; ?></td>
+                            <?php } else {
+                            ?>
+                                <td class="badge-danger"><?= $lokeri['status']; ?></td>
+                            <?php } ?>
                             <td>
-                                <a href="<?= base_url('cek_sortir/tr_index/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a>
+                                <!-- <a href="<?= base_url('cek_sortir/tr_index/') . $lokeri['id'] ?>" class="btn btn btn-sm btn-primary">Cek Kandidat<i class="fa fa-fw fa-book"></i></a> -->
+                                <a href="<?= base_url('cek_sortir/kandidat_by_status/' . $lokeri['id'] . '/tidak_relevan') ?>" class="btn btn-sm btn-danger">
+                                    Cek Kandidat <i class="fa fa-ban"></i>
+                                </a>
                             </td>
-                            <td><?= $lokeri['status']; ?></td>
+
 
                             <!-- <td>
 

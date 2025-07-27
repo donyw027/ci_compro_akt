@@ -154,8 +154,8 @@
 
                             </td>
                             <td>
-                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-secondary">Sortir<i class="fa fa-fw fa-check"></i></a>
-                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
+                                <a onclick="return confirm('Ganti Status kandidat menjadi sortir?')" href="<?= base_url('kandidat/status_sortir/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-secondary">Sortir<i class="fa fa-fw fa-check"></i></a>
+                                <a onclick="return confirm('Ganti Status kandidat menjadi tidak relevan?')" href="<?= base_url('kandidat/status_tr/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
                             </td>
                         </tr>
 

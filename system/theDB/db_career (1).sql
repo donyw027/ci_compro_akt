@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2025 at 11:12 AM
+-- Generation Time: Jul 27, 2025 at 09:40 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -49,22 +49,24 @@ CREATE TABLE `kandidat` (
 --
 
 INSERT INTO `kandidat` (`id`, `nama`, `tempat_lahir`, `tgl_lahir`, `email`, `no_wa`, `pendidikan`, `jurusan`, `jk`, `foto`, `cv`, `id_loker`, `applydate`, `status`) VALUES
-(1, 'doni sortir', 'malang', '7 mei', 'doni@gmail', '089672574222', 'S1', 'Sistem Inform', 'Laki Laki', '1.jpg', 'C1052.pdf', '22', '7 juni ', 'sortir'),
-(2, 'rena sortir', 'malang2', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '23', '7 juni jam1', 'sortir'),
+(1, 'doni sortir', 'malang', '7 mei', 'doni@gmail', '089672574222', 'S1', 'Sistem Inform', 'Laki Laki', '1.jpg', 'C1052.pdf', '22', '7 juni ', 'tidak relevan'),
+(2, 'rena sortir', 'malang2', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '23', '7 juni jam1', 'tidak_relevan'),
 (3, 'doni inter', 'malang3', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '3.jpg', 'C1052.pdf', '22', '7 juni ', 'interview'),
-(4, 'rena inter', 'malang4', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '23', '7 juni jam1', 'interview'),
-(5, 'doni TR', 'malang5', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '22', '7 juni ', 'tidak relevan'),
-(6, 'rena TR', 'malang6', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '1.jpg', 'C1052.pdf', '23', '7 juni jam1', 'tidak relevan'),
+(4, 'rena inter', 'malang4', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '23', '7 juni jam1', 'tidak_relevan'),
+(5, 'doni TR', 'malang5', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '22', '7 juni ', 'tidak_relevan'),
+(6, 'rena TR', 'malang6', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '1.jpg', 'C1052.pdf', '23', '7 juni jam1', 'tidak_relevan'),
 (7, 'doni lolos', 'malang6', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '2.jpg', 'C1052.pdf', '22', '7 juni ', 'lolos'),
 (8, 'rena tidak lolos', 'malang7', '7 mei', 'doni@gmail', '312831', 'S1', 'Sistem Inform', 'Laki Laki', '1.jpg', 'C1052.pdf', '23', '7 juni jam1', 'tidak lolos'),
-(9, 'soni', 'adalah', 'anak', 'baik@gmail.com', '089672574222', 'SMA / SMK', 're', 'Laki-laki', '1.jpg', 'C1052.pdf', '23', '0', 'sortir'),
-(10, 'kedua', 'kalinya', 'aku', 'djasi@gmail.com', '089672574222', 'D-I /D-III', 're', 'Laki-laki', '2.jpg', 'C1052.pdf', '23', '26-07-2025 10:0', 'sortir'),
-(11, 'doni', 'tamsa', 'dsa', 'das@gmail.com', '089672574222', 'S-2 (Pascasarjana)', 're', 'Perempuan', '3.jpg', 'C1052.pdf', '23', '26-07-2025 10:07', 'sortir'),
-(12, 'doni', 'tamsa', 'dsa', 'das@gmail.com', '089672574222', 'S-2 (Pascasarjana)', 're', 'Perempuan', '1.jpg', 'C1052.pdf', '23', '26-07-2025 10:08', 'sortir'),
-(13, 'dandal', 'dska', 'dska', 'das@gmail.com', '089672574222', 'SMA / SMK', 're', 'Laki-laki', '2.jpg', 'C1052.pdf', '23', '26-07-2025 10:09', 'sortir'),
-(14, 'tesqas', 'dassd', 'dsa', 'dsa@gmail.com', '089672574222', 'D-I /D-III', 're', 'Laki-laki', '3.jpg', 'C1052.pdf', '22', '26-07-2025 10:13', 'sortir'),
-(15, 'seuri', 'tamsa', 'aku', 'doniwicaksono27@gmail.com', '089672574222', 'D-I /D-III', 're', 'Perempuan', '1.jpg', 'C1052.pdf', '22', '26-07-2025 10:14', 'sortir'),
-(16, 'Resia', 'Gempol', '2021-06-26', 'resdono27@gmail.com', 'dan', 'D-IV / S-1', 'Sikolog', 'Laki-laki', '2.jpg', '3.pdf', '23', '26-07-2025 10:48', 'sortir');
+(9, 'soni', 'adalah', 'anak', 'baik@gmail.com', '089672574222', 'SMA / SMK', 're', 'Laki-laki', '1.jpg', 'C1052.pdf', '23', '0', 'tidak_relevan'),
+(10, 'kedua', 'kalinya', 'aku', 'djasi@gmail.com', '089672574222', 'D-I /D-III', 're', 'Laki-laki', '2.jpg', 'C1052.pdf', '23', '26-07-2025 10:0', 'tidak_relevan'),
+(11, 'doni', 'tamsa', 'dsa', 'das@gmail.com', '089672574222', 'S-2 (Pascasarjana)', 're', 'Perempuan', '3.jpg', 'C1052.pdf', '23', '26-07-2025 10:07', 'interview'),
+(12, 'doni', 'tamsa', 'dsa', 'das@gmail.com', '089672574222', 'S-2 (Pascasarjana)', 're', 'Perempuan', '1.jpg', 'C1052.pdf', '23', '26-07-2025 10:08', 'interview'),
+(13, 'dandal', 'dska', 'dska', 'das@gmail.com', '089672574222', 'SMA / SMK', 're', 'Laki-laki', '2.jpg', 'C1052.pdf', '23', '26-07-2025 10:09', 'tidak_relevan'),
+(14, 'tesqas', 'dassd', 'dsa', 'dsa@gmail.com', '089672574222', 'D-I /D-III', 're', 'Laki-laki', '3.jpg', 'C1052.pdf', '22', '26-07-2025 10:13', 'interview'),
+(15, 'seuri', 'tamsa', 'aku', 'doniwicaksono27@gmail.com', '089672574222', 'D-I /D-III', 're', 'Perempuan', '1.jpg', 'C1052.pdf', '22', '26-07-2025 10:14', 'interview'),
+(16, 'Resia', 'Gempol', '2021-06-26', 'resdono27@gmail.com', 'dan', 'D-IV / S-1', 'Sikolog', 'Laki-laki', '2.jpg', '3.pdf', '23', '26-07-2025 10:48', 'tidak_relevan'),
+(25, 'Disa Sasmita', 'Malng', '6651-12-15', 'dimasbudipratama@gmail.com', '31290', 'D-IV / S-1', 'Teknik Informatika', 'Perempuan', '1753597125_f.png', '1753597125_c.pdf', '24', '27-07-2025 08:18', 'interview'),
+(26, 'Dea Tamara', 'dasda d as', '2025-07-02', 'doni@gmail.com', '2626', 'S-2 (Pascasarjana)', 'Teknik Informatika', 'Laki-laki', '1753597525_f.png', '1753597525_c.pdf', '24', '27-07-2025 08:25', 'sortir');
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kandidat`
 --
 ALTER TABLE `kandidat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `loker`

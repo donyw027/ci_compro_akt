@@ -34,7 +34,8 @@
 				</div>
 				<div class="card-body pb-2">
 					<?= $this->session->flashdata('pesan'); ?>
-					<?= form_open(); ?>
+					<!-- <?= form_open(); ?> -->
+					<?= form_open_multipart(); ?>
 
 					<div class="form-group row">
 						<label class="col-md-4 col-form-label text-md-right" for="posisi">Posisi Yang dilamar</label>
@@ -119,18 +120,18 @@
 
 
 					<div class="form-group row">
-						<label class="col-md-4 col-form-label text-md-right" for="posisi">Upload Foto Formal <br> (Max Size: 1MB, Format: JPEG, JPG, PNG)</label>
+						<label class="col-md-4 col-form-label text-md-right" for="foto">Upload Foto Formal <br> (Max Size: 1MB, Format: JPEG, JPG, PNG)</label>
 						<div class="col-md-4">
-							<input value="<?= set_value('posisi'); ?>" type="file" id="posisi" name="posisi" class="form-control" placeholder="Upload Foto ...">
-							<?= form_error('posisi', '<span class="text-danger small">', '</span>'); ?>
+							<input value="<?= set_value('foto'); ?>" type="file" id="foto" name="foto" class="form-control" placeholder="Upload Foto ...">
+							<?= form_error('foto', '<span class="text-danger small">', '</span>'); ?>
 						</div>
 					</div>
 
 					<div class="form-group row">
-						<label class="col-md-4 col-form-label text-md-right" for="posisi">Upload CV <br> (Max Size: 1MB, Format: JPEG, JPG, PNG)</label>
+						<label class="col-md-4 col-form-label text-md-right" for="cv">Upload CV <br> (Max Size: 1MB, Format: PDF)</label>
 						<div class="col-md-4">
-							<input value="<?= set_value('posisi'); ?>" type="file" id="posisi" name="posisi" class="form-control" placeholder="Upload CV ...">
-							<?= form_error('posisi', '<span class="text-danger small">', '</span>'); ?>
+							<input value="<?= set_value('cv'); ?>" type="file" id="cv" name="cv" class="form-control" placeholder="Upload CV ...">
+							<?= form_error('cv', '<span class="text-danger small">', '</span>'); ?>
 						</div>
 					</div>
 

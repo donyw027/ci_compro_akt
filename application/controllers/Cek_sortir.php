@@ -37,32 +37,51 @@ class Cek_sortir extends CI_Controller
     }
 
 
-    public function kandidat_index($id_loker = null)
+    // public function kandidat_index($id_loker = null)
+    // {
+    //     $data['title'] = "Sortir Kandidat";
+    //     $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'sortir');
+    //     $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+    //     $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
+    // }
+
+    // public function interview_index($id_loker = null)
+    // {
+    //     $data['title'] = "Kandidat Interview";
+    //     $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'interview');
+    //     $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+    //     $this->template->load('templates/dashboard', 'interview/datainterview', $data);
+    // }
+
+    // public function tr_index($id_loker = null)
+    // {
+    //     $data['title'] = "Kandidat Tidak Relevan";
+    //     $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'tidak relevan');
+    //     $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+    //     $this->template->load('templates/dashboard', 'tidak_relevan/data_tr', $data);
+    // }
+
+    public function kandidat_by_status($id_loker = null, $status = 'sortir')
     {
-        $data['title'] = "Sortir Kandidat";
-        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'sortir');
+        $judul_map = [
+            'sortir' => 'Sortir Kandidat',
+            'interview' => 'Kandidat Interview',
+            'tidak_relevan' => 'Kandidat Tidak Relevan',
+            'lolos' => 'Kandidat Lolos',
+            'tidak lolos' => 'Kandidat Tidak Lolos'
+        ];
+
+        $data['title'] = $judul_map[$status] ?? 'Kandidat';
+        $data['status'] = $status;
+        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, $status);
         $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
 
         $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
     }
 
-    public function interview_index($id_loker = null)
-    {
-        $data['title'] = "Kandidat Interview";
-        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'interview');
-        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
-
-        $this->template->load('templates/dashboard', 'interview/datainterview', $data);
-    }
-
-    public function tr_index($id_loker = null)
-    {
-        $data['title'] = "Kandidat Tidak Relevan";
-        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, 'tidak relevan');
-        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
-
-        $this->template->load('templates/dashboard', 'tidak_relevan/data_tr', $data);
-    }
 
 
 
