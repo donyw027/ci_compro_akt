@@ -64,23 +64,42 @@ class Cek_sortir extends CI_Controller
     //     $this->template->load('templates/dashboard', 'tidak_relevan/data_tr', $data);
     // }
 
+    // public function kandidat_by_status($id_loker = null, $status = 'sortir')
+    // {
+    //     $judul_map = [
+    //         'sortir' => 'Sortir Kandidat',
+    //         'interview' => 'Kandidat Interview',
+    //         'tidak_relevan' => 'Kandidat Tidak Relevan',
+    //         'lolos' => 'Kandidat Lolos',
+    //         'tidak lolos' => 'Kandidat Tidak Lolos'
+    //     ];
+
+    //     $data['title'] = $judul_map[$status] ?? 'Kandidat';
+    //     $data['status'] = $status;
+    //     $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, $status);
+    //     $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+
+    //     $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
+    // }
+
     public function kandidat_by_status($id_loker = null, $status = 'sortir')
-    {
-        $judul_map = [
-            'sortir' => 'Sortir Kandidat',
-            'interview' => 'Kandidat Interview',
-            'tidak_relevan' => 'Kandidat Tidak Relevan',
-            'lolos' => 'Kandidat Lolos',
-            'tidak lolos' => 'Kandidat Tidak Lolos'
-        ];
+{
+    $judul_map = [
+        'sortir'         => 'Sortir Kandidat',
+        'interview'      => 'Kandidat Interview',
+        'tidak_relevan'  => 'Kandidat Tidak Relevan',
+        'lolos'          => 'Kandidat Lolos',
+        'tidak_lolos'    => 'Kandidat Tidak Lolos'
+    ];
 
-        $data['title'] = $judul_map[$status] ?? 'Kandidat';
-        $data['status'] = $status;
-        $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, $status);
-        $data['loker'] = $this->admin->get('loker', ['id' => $id_loker]);
+    $data['title']    = $judul_map[$status] ?? 'Kandidat';
+    $data['status']   = $status; // ini penting agar bisa digunakan di view
+    $data['kandidat'] = $this->admin->getKandidatByLokerAndStatus($id_loker, $status);
+    $data['loker']    = $this->admin->get('loker', ['id' => $id_loker]);
 
-        $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
-    }
+    $this->template->load('templates/dashboard', 'cek_kandidat/data', $data);
+}
+
 
 
 

@@ -54,7 +54,7 @@
                             </td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalDetail<?= $kandidati['id'] ?>">
-                                    Detail Kandidat <i class="fa fa-fw fa-book"></i>
+                                    CV / Resume <i class="fa fa-fw fa-book"></i>
                                 </button>
                                 <!-- modal -->
                                 <div class="modal fade" id="modalDetail<?= $kandidati['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="modalDetailLabel<?= $kandidati['id'] ?>" aria-hidden="true">
@@ -143,9 +143,14 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn btn-sm  btn-secondary" data-dismiss="modal">Tutup</button>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
 
-                                                <a href="<?= base_url('kandidat/edit/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
+
+
+                                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/interview?from=' . $status) ?>" class="btn btn-sm btn-success">Interview <i class="fa fa-fw fa-check"></i></a>
+                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/tidak_relevan?from=' . $status) ?>" class="btn btn-sm btn-danger">Tidak Relevan <i class="fa fa-fw fa-ban"></i></a>
+                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/sortir?from=' . $status) ?>" class="btn btn-sm btn-warning">Kembalikan ke Sortir<i class="fa fa-fw fa-filter"></i></a>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -156,8 +161,17 @@
 
                             </td>
                             <td>
-                                <a onclick="return confirm('Ganti Status kandidat menjadi interview?')" href="<?= base_url('kandidat/status_interview/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
-                                <a onclick="return confirm('Ganti Status kandidat menjadi tidak relevan?')" href="<?= base_url('kandidat/status_tr/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a>
+
+                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/interview?from=' . $status) ?>" class="btn btn-sm btn-success">Interview <i class="fa fa-fw fa-check"></i></a>
+                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/tidak_relevan?from=' . $status) ?>" class="btn btn-sm btn-danger">Tidak Relevan <i class="fa fa-fw fa-ban"></i></a>
+                                <a href="<?= base_url('kandidat/ubah_status/' . $kandidati['id'] . '/sortir?from=' . $status) ?>" class="btn btn-sm btn-warning">Kembalikan ke Sortir<i class="fa fa-fw fa-filter"></i></a>
+                            
+
+
+
+
+                                <!-- <a onclick="return confirm('Ganti Status kandidat menjadi interview?')" href="<?= base_url('kandidat/status_interview/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-success">Interview<i class="fa fa-fw fa-check"></i></a>
+                                <a onclick="return confirm('Ganti Status kandidat menjadi tidak relevan?')" href="<?= base_url('kandidat/status_tr/') . $kandidati['id'] ?>" class="btn btn btn-sm btn-danger">Tidak Relevan<i class="fa fa-fw fa-ban"></i></a> -->
                             </td>
                         </tr>
 
