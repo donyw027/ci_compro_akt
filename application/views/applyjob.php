@@ -80,6 +80,39 @@
 							<?= form_error('no_wa', '<span class="text-danger small">', '</span>'); ?>
 						</div>
 					</div>
+
+					
+
+					<div class="form-group row">
+
+					
+						<label class="col-md-4 col-form-label text-md-right" for="salary_ekspetasi">Salary</label>
+						<div class="col-md-3 ml-0">
+							<input type="text" id="salary_ekspetasi" name="salary_ekspetasi" class="form-control" placeholder="Salary Expetation ..." value="<?= set_value('salary_ekspetasi'); ?>">
+							<?= form_error('salary_ekspetasi', '<small class="text-danger">', '</small>'); ?>
+						</div>
+						<div class="col-md-3">
+							<input type="text" id="last_salary" name="last_salary" class="form-control" value="<?= set_value('last_salary'); ?>" placeholder="Current Salary ...">
+							<?= form_error('last_salary', '<small class="text-danger">', '</small>'); ?>
+						</div>
+
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-4 col-form-label text-md-right" for="experience">Experience Status</label>
+						<div class="col-md-6">
+							<select id="experience" name="experience" class="form-control">
+								<option value="">--Experience Status--</option>
+								<option value="Experienced">Experienced</option>
+								<option value="Fresh Graduate">Fresh Graduate</option>
+								
+							</select>
+
+							<?= form_error('experience', '<span class="text-danger small">', '</span>'); ?>
+						</div>
+					</div>
+
+
 					<div class="form-group row">
 						<label class="col-md-4 col-form-label text-md-right" for="pendidikan">Pendidikan Terakhir</label>
 						<div class="col-md-6">
@@ -150,7 +183,7 @@
 					<div class="form-group row justify-content-end">
 						<div class="col-md-8">
 							<button type="submit" class="btn btn-primary">
-								<i class="fa fa-save"></i> Simpan
+								<i class="fa fa-save"></i> Submit
 							</button>
 							<button type="reset" class="btn btn-secondary">
 								Reset

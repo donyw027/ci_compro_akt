@@ -126,3 +126,16 @@
 		updateCounter();
 	});
 </script>
+
+<script>
+function formatNumberInput(id) {
+	document.getElementById(id).addEventListener('input', function(e) {
+		let value = this.value.replace(/\D/g, '');
+		if (value === '') return this.value = '';
+		this.value = new Intl.NumberFormat('id-ID').format(value);
+	});
+}
+
+formatNumberInput('salary_ekspetasi');
+formatNumberInput('last_salary');
+</script>

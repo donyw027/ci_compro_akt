@@ -61,7 +61,7 @@
                                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header bg-primary text-white">
-                                                <h5 class="modal-title" id="modalDetailLabel<?= $kandidati['id'] ?>">Detail Kandidat: <?= $kandidati['nama'] ?></h5>
+                                                <h5 class="modal-title" id="modalDetailLabel<?= $kandidati['id'] ?>">Detail Kandidat: <?= strtoupper($kandidati['nama']) ?></h5>
                                                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Tutup">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -74,7 +74,7 @@
 
                                                         </th>
                                                         <th colspan="2" class="text-center bg-secondary text-white">
-                                                            Apply Date : <?= $kandidati['applydate'] ?>
+                                                            Apply Date : <?= date('d-M-Y H:i', strtotime($kandidati['applydate'])) ?>
                                                         </th>
                                                     </tr>
                                                     <tr>
@@ -86,7 +86,7 @@
                                                             <?php endif; ?>
                                                         </td>
                                                         <th>Nama</th>
-                                                        <td><?= $kandidati['nama'] ?></td>
+                                                        <td><?= strtoupper($kandidati['nama']) ?></td>
 
                                                     </tr>
                                                     <tr>
@@ -99,15 +99,45 @@
                                                     </tr>
                                                     <tr>
                                                         <th>Tempat, Tgl Lahir</th>
-                                                        <td colspan="2"><?= $kandidati['tempat_lahir'] ?>, <?= $kandidati['tgl_lahir'] ?></td>
+                                                        <td colspan="2"><?= strtoupper($kandidati['tempat_lahir']) ?>, <?= date('d-M-Y', strtotime($kandidati['tgl_lahir'])) ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Pendidikan & Jurusan</th>
-                                                        <td colspan="2"><?= $kandidati['pendidikan'] ?> - <?= $kandidati['jurusan'] ?></td>
+                                                        <td colspan="2"><?= $kandidati['pendidikan'] ?> - <?= strtoupper($kandidati['jurusan']) ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Jenis Kelamin</th>
+                                                        
                                                         <td colspan="2"><?= $kandidati['jk'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Last Salary</th>
+                                                        <?php 
+                                                            if ($kandidati['last_salary'] == null) { ?>
+                                                        <td colspan="2">Rp. 0 </td>
+                                                                
+                                                           <?php }else{ ?>
+
+                                                            <td colspan="2">Rp <?= number_format($kandidati['last_salary'], 0, ',', '.') ?></td>
+                                                            <?php }?>
+                                                        
+
+                                                        <!-- <td colspan="2"><?= $kandidati['last_salary'] ?></td> -->
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Salary Expectation</th>
+                                                        <?php 
+                                                            if ($kandidati['salary_ekspetasi'] == null) { ?>
+                                                        <td colspan="2">Rp. 0 </td>
+                                                                
+                                                           <?php }else{ ?>
+
+                                                            <td colspan="2">Rp <?= number_format($kandidati['salary_ekspetasi'], 0, ',', '.') ?></td>
+                                                            <?php }?>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Experience Status</th>
+                                                        <td colspan="2"><?= $kandidati['experience'] ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th colspan="3">CV</th>

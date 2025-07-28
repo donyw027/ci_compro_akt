@@ -125,7 +125,11 @@ class Welcome extends CI_Controller
 			$this->form_validation->set_rules('tgl_lahir', 'tgl_lahir', 'required|trim');
 			$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]');
 			$this->form_validation->set_rules('no_wa', 'no_wa', 'required|trim|numeric');
+			$this->form_validation->set_rules('salary_ekspetasi', 'Salary Expetation', 'required|trim');
+			$this->form_validation->set_rules('last_salary', 'Last Salary', 'required|trim');
+
 			$this->form_validation->set_rules('pendidikan', 'pendidikan', 'required|trim');
+			$this->form_validation->set_rules('experience', 'experience', 'required|trim');
 			$this->form_validation->set_rules('jurusan', 'jurusan', 'trim|required');
 			$this->form_validation->set_rules('jk', 'jk', 'required|trim');
 			$this->form_validation->set_rules('foto', 'foto', 'callback_validasi_foto');
@@ -207,7 +211,10 @@ class Welcome extends CI_Controller
 			$this->load->view('applyjob');
 			$this->load->view('head_foot/footer');
 		} else {
+
 			$input = $this->input->post(null, true);
+			$salary_ekspetasi = str_replace('.', '', $this->input->post('salary_ekspetasi', true));
+			$last_salary = str_replace('.', '', $this->input->post('last_salary', true));
 			$input_data = [
 				'nama'          => $input['nama'],
 				'tempat_lahir'      => $input['tempat_lahir'],
@@ -221,6 +228,10 @@ class Welcome extends CI_Controller
 				'cv'          => '-',
 				'id_loker'          => $id_loker,
 				'applydate'    => date('d-m-Y H:i'),
+				'salary_ekspetasi'          => $salary_ekspetasi,
+				'last_salary'          => $last_salary,
+				'experience'          => $input['experience'],
+
 				'status'          => 'sortir'
 			];
 
@@ -266,7 +277,7 @@ class Welcome extends CI_Controller
 
 
 			if ($this->admin->insert('kandidat', $input_data)) {
-				set_pesan('Data apply disimpan tolong menunggu review dari pihak HRD kami');
+				set_pesan('Lamaran Anda telah berhasil dikirim. Jika sesuai dengan kualifikasi, kami akan menghubungi Anda untuk proses selanjutnya ');
 
 				$this->load->helper('text');
 				redirect('welcome/career');
